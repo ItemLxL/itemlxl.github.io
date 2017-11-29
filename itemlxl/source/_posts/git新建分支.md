@@ -1,6 +1,6 @@
 ---
 title: 将本地的hexo博客静态文件添加到GitHub的分支
-date: 2017-11-28
+tags:hexo
 ---
 
 早上的时候突然想起一个很严肃的问题，我现在的blog更新的静态文件是保存在本地的，这就意味着如果我换了电脑光从GitHub上将项目拷贝下来还不够，还要将我本地的这些静态页面的文件通过网盘或者U盘的形式拷贝到新电脑上。这对于本懒人来说是不能忍的！![](http://imgsrc.baidu.com/forum/w%3D580/sign=a930467da1014c08193b28ad3a7a025b/10f622adcbef76090b22524b26dda3cc7cd99e3f.jpg)经过一上午外加半个下午的时间，终于解决了这个问题，下面跟着步骤走：
@@ -53,7 +53,7 @@ npm install 添加依赖
 npm install hexo-deployer-git
 ```
 添加完依赖之后就简单了，执行hexo部署三大件`hexo clean 、hexo g 、hexo d`,第一次执行`hexo clean`的时候会报错，因为这下还没有生成缓存文件，执行`hexo g`后就会生成了，`hexo d`部署之后，下面来享受成果吧，打来博客看一看更新的内容
-![微信图片_20171128170617](%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20171128170617.png)
+![微信图片_20171128170617](http://image-up-lee.test.upcdn.net/wx1.jpg!)
 一秒。。。
 两秒。。。
 三秒。。。
