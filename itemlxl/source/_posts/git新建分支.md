@@ -45,7 +45,7 @@ git push --set-upstream origin hexo(分支名)
 当文件上传好之后，就代表着我们可以在别的电脑上也能愉快的写blog啦，具体的操作步骤如下：
 
 ```
-git clone -b hexo https://github.com/ItemLxL/itemlxl.github.io.git
+git clone -b hexo https://github.com/XXX/XXX.github.io.git
 ```
 可以看到这和平常的从GitHub上clone项目不同，多了一个`-b和hexo`,这是用来clone分支的操作，`-b`后面跟的是分支的名字，拷贝完后，在文件夹可以看到一些文件，这是要在终端执行
 ```
@@ -65,3 +65,28 @@ git rm -rf --cached themes/
 git add themes/
 ```
 是不是觉得很莫名奇妙？没错，我现在的感觉也是莫名奇妙的，但通过这个方法确实能够将文件更新上去了，之后再重新拉取一次项目，添加一篇文章，执行[拉取和修改](#拉取和修改)这里的步骤，这次终于将文章更新上去了，可是还有些问题没有弄明白，之后再更新咯
+
+
+## 补充
+因为上面说的思路不清晰，这里来整理一下当hexo配置到GitHub之后再新电脑上怎么拉取下来然后再操作
+* 在本地拉取项目`git clone -b hexo https://github.com/XXX/XXX.github.io.git`
+* `添加依赖npm install` 
+* `npm install hexo-deployer-git`
+* 如果本地没有配置hexo，还要`npm install -g hexo-cli`
+* 配置GitHub邮箱`git config --global user.email "email"`
+* 配置GitHub用户名 `git config --global user.name "username"`
+当完成以上几步之后就可以添加文章或者直接修改项目文件夹下`source`里的文章了，修改完成之后先要上传
+```
+	git add --all
+	git commit -m "更新说明"
+	git push
+```
+上传了之后就可以在本地更新hexo博客了，执行
+```
+	hexo clean
+	hexo g
+	hexo d
+```
+这样文章就更新上去了，同时在远程仓库中也是最新的，下次在原有项目的电脑上如果要上传的话，首先要
+`git pull`
+这一点很重要，是为了保持文件始终是最新的，到这里差不多流程就结束了
