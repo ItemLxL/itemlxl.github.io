@@ -14,7 +14,7 @@ tags:
     $ cd your-hexo-site  
     $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 将主题clone到我们自己的hexo站点目录下，然后打开`_config.yml`，在里面找到
-![1](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/1.png?Expires=1525142768&OSSAccessKeyId=TMP.AQG-2hGGT7UlhcxUWij5ViadteIZLyY4oZ744RVmBBSTAgOW83BDmw1c8vZEAAAwLAIUcI4AqzQ3keTqKsfUViZ7UXKDK5ECFHrmY3wAIYp5l4TNy5ZRHhkB8vQv&Signature=tk0YOsYkl7GbFu17gKvuji0M5kw%3D)
+![1](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/1.png?Expires=1525207875&OSSAccessKeyId=TMP.AQG-2hGGT7UlhcxUWij5ViadteIZLyY4oZ744RVmBBSTAgOW83BDmw1c8vZEAAAwLAIUcI4AqzQ3keTqKsfUViZ7UXKDK5ECFHrmY3wAIYp5l4TNy5ZRHhkB8vQv&Signature=3nJNL7qSJ%2F9yMeW4HuiLoHAi0K4%3D)
 把theme后面对应的主题名字换成你下载的那个主题的名字。
 
 ## 配置

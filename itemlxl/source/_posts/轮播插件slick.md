@@ -6,7 +6,7 @@ tags:
 今天在做轮播图的时候搜到了一个插件叫slick，就下下来尝试了一下，关于插件的下载可以点这个链接[slick](http://kenwheeler.github.io/slick/)，链接中的网页还包含了插件使用的演示。
 首先当我们下载好插件后先要引入必要的文件，其中包括：
 
-![11](http://li-7857.oss-cn-beijing.aliyuncs.com/imgs/11.png?Expires=1515210138&OSSAccessKeyId=TMP.AQEIwQRaFryuiG2gxYDOEI8E_20-E0S_na8LUB33VA8UrXeE9aSPuGZgaIuXADAtAhQSTFt5y_qQ7UUFwlADcD75g0arwAIVAPkRmqNQ9xX6JtG8v5vjnmEnj_dp&Signature=AWg5bPIPOUr26iZKjMyLMFCU9L0%3D)
+![11](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/11.png?Expires=1525207842&OSSAccessKeyId=TMP.AQG-2hGGT7UlhcxUWij5ViadteIZLyY4oZ744RVmBBSTAgOW83BDmw1c8vZEAAAwLAIUcI4AqzQ3keTqKsfUViZ7UXKDK5ECFHrmY3wAIYp5l4TNy5ZRHhkB8vQv&Signature=uTh37n1K9EzDssP3q20HsTo4Al8%3D)
 以上几个文件，这里需要注意的是slick.js必须要在jquery.js的下面。
 将文件导入后就可以开工了，照着文档的代码来就是
 
