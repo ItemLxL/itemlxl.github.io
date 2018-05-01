@@ -94,7 +94,7 @@ index_with_subtitle: false
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
+  tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
@@ -111,9 +111,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+# scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 #scheme: Gemini
 
 
@@ -126,9 +126,10 @@ scheme: Muse
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/ItemLxL || github
+  E-Mail: mailto:785732938@qq.com || envelope
+  豆瓣: https://www.douban.com/people/161832146/
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -142,6 +143,8 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
+  GitHub: github
+  豆瓣: globe
 
 # Blog rolls
 links_icon: link
@@ -154,7 +157,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /images/avatarme.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -811,3 +814,7 @@ images: images
 
 # Theme version
 version: 5.1.4
+
+# 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true

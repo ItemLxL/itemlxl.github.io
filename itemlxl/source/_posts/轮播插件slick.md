@@ -7,6 +7,9 @@ tags: JavaScript
 首先当我们下载好插件后先要引入必要的文件，其中包括：
 
 ![11](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/11.png?Expires=1525207842&OSSAccessKeyId=TMP.AQG-2hGGT7UlhcxUWij5ViadteIZLyY4oZ744RVmBBSTAgOW83BDmw1c8vZEAAAwLAIUcI4AqzQ3keTqKsfUViZ7UXKDK5ECFHrmY3wAIYp5l4TNy5ZRHhkB8vQv&Signature=uTh37n1K9EzDssP3q20HsTo4Al8%3D)
+
+<!-- more -->
+
 以上几个文件，这里需要注意的是slick.js必须要在jquery.js的下面。
 将文件导入后就可以开工了，照着文档的代码来就是
 
