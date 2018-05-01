@@ -1,7 +1,7 @@
 ---
 title: 轮播插件slick的使用
 date: 2018-1-5 
-tags:
+tags: JavaScript
 ---
 今天在做轮播图的时候搜到了一个插件叫slick，就下下来尝试了一下，关于插件的下载可以点这个链接[slick](http://kenwheeler.github.io/slick/)，链接中的网页还包含了插件使用的演示。
 首先当我们下载好插件后先要引入必要的文件，其中包括：
