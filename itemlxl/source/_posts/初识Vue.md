@@ -1,7 +1,7 @@
 ---
 title: 初识Vue
 date: 2017-12-19
-tags:
+tags: vue
 ---
 ###	1. Vue的声明方式
 通过一个模板语法来将数据渲染进DOM
