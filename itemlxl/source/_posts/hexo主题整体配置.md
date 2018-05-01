@@ -4,7 +4,7 @@ date: 2018-4-30
 tags:
 ---
 
->自从博客搭建好之后象征性的的放了几篇文章就给扔到一边了，最近趁着五一放假，在家也闲着没事，想着还是要写点什么，下面进入正题。
+>自从博客搭建好之后象征性的放了几篇文章就给扔到一边了，最近趁着五一放假，在家也闲着没事，想着还是要写点什么，下面进入正题。
 
 既然要认真对待，那么在搭建完博客之后当然是要配置一个好看的主题不是吗，当然我个人喜欢的是简洁风格的主题，所以这次介绍的也是配置这个方面的，不过配置的方式都差不多，到时候各位可以自行选择
 
@@ -14,7 +14,8 @@ tags:
     $ cd your-hexo-site  
     $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 将主题clone到我们自己的hexo站点目录下，然后打开`_config.yml`，在里面找到
-![1](1.png)，把theme后面对应的主题名字换成你下载的那个主题的名字。
+![1](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/1.png?Expires=1525142768&OSSAccessKeyId=TMP.AQG-2hGGT7UlhcxUWij5ViadteIZLyY4oZ744RVmBBSTAgOW83BDmw1c8vZEAAAwLAIUcI4AqzQ3keTqKsfUViZ7UXKDK5ECFHrmY3wAIYp5l4TNy5ZRHhkB8vQv&Signature=tk0YOsYkl7GbFu17gKvuji0M5kw%3D)
+把theme后面对应的主题名字换成你下载的那个主题的名字。
 
 ## 配置
 我们在本地操作完成之后一定要记得更新站点
