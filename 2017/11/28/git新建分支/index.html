@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="hexo," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="早上的时候突然想起一个很严肃的问题，我现在的blog更新的静态文件是保存在本地的，这就意味着如果我换了电脑光从GitHub上将项目拷贝下来还不够，还要将我本地的这些静态页面的文件通过网盘或者U盘的形式拷贝到新电脑上。这对于本懒人来说是不能忍的！经过一上午外加半个下午的时间，终于解决了这个问题，下面跟着步骤走：注（先搭好环境的情况下才适合，关于环境的搭建请参考hexo从零开始到搭建完整） 1. 首先">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将本地的hexo博客静态文件添加到GitHub的分支">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/git新建分支/index.html">
+<meta property="og:site_name" content="黑胡子怪象">
+<meta property="og:description" content="早上的时候突然想起一个很严肃的问题，我现在的blog更新的静态文件是保存在本地的，这就意味着如果我换了电脑光从GitHub上将项目拷贝下来还不够，还要将我本地的这些静态页面的文件通过网盘或者U盘的形式拷贝到新电脑上。这对于本懒人来说是不能忍的！经过一上午外加半个下午的时间，终于解决了这个问题，下面跟着步骤走：注（先搭好环境的情况下才适合，关于环境的搭建请参考hexo从零开始到搭建完整） 1. 首先">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://imgsrc.baidu.com/forum/w%3D580/sign=a930467da1014c08193b28ad3a7a025b/10f622adcbef76090b22524b26dda3cc7cd99e3f.jpg">
+<meta property="og:image" content="http://image-up-lee.test.upcdn.net/wx1.jpg">
+<meta property="og:updated_time" content="2018-05-02T06:23:51.815Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="将本地的hexo博客静态文件添加到GitHub的分支">
+<meta name="twitter:description" content="早上的时候突然想起一个很严肃的问题，我现在的blog更新的静态文件是保存在本地的，这就意味着如果我换了电脑光从GitHub上将项目拷贝下来还不够，还要将我本地的这些静态页面的文件通过网盘或者U盘的形式拷贝到新电脑上。这对于本懒人来说是不能忍的！经过一上午外加半个下午的时间，终于解决了这个问题，下面跟着步骤走：注（先搭好环境的情况下才适合，关于环境的搭建请参考hexo从零开始到搭建完整） 1. 首先">
+<meta name="twitter:image" content="http://imgsrc.baidu.com/forum/w%3D580/sign=a930467da1014c08193b28ad3a7a025b/10f622adcbef76090b22524b26dda3cc7cd99e3f.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/28/git新建分支/"/>
+
+
+
+
+
+  <title>将本地的hexo博客静态文件添加到GitHub的分支 | 黑胡子怪象</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">黑胡子怪象</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">带我去永无乡吧</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/28/git新建分支/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatarme.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑胡子怪象">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">将本地的hexo博客静态文件添加到GitHub的分支</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-28T00:00:00+08:00">
+                2017-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>早上的时候突然想起一个很严肃的问题，我现在的blog更新的静态文件是保存在本地的，这就意味着如果我换了电脑光从GitHub上将项目拷贝下来还不够，还要将我本地的这些静态页面的文件通过网盘或者U盘的形式拷贝到新电脑上。这对于本懒人来说是不能忍的！<img src="http://imgsrc.baidu.com/forum/w%3D580/sign=a930467da1014c08193b28ad3a7a025b/10f622adcbef76090b22524b26dda3cc7cd99e3f.jpg" alt="">经过一上午外加半个下午的时间，终于解决了这个问题，下面跟着步骤走：<br><strong>注</strong>（先搭好环境的情况下才适合，关于环境的搭建请参考<a href="http://visugar.com/2017/05/04/20170504SetUpHexoBlog/" target="_blank" rel="noopener">hexo从零开始到搭建完整</a>）</p>
+<h2 id="1-首先要新建一个GitHub分支"><a href="#1-首先要新建一个GitHub分支" class="headerlink" title="1. 首先要新建一个GitHub分支"></a>1. <strong>首先要新建一个GitHub分支</strong></h2><p>在新建分支之前，我们可以先查看一下当前所在的分支，在文件中打开终端并输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>正常搭建完环境之后会输出<code>*master</code>这一默认分支，然后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//新建分支</span><br><span class="line">git branch hexo(分支名)</span><br><span class="line"></span><br><span class="line">//切换到新建的分支</span><br><span class="line">git checkout hexo(分支名)</span><br><span class="line"></span><br><span class="line">再执行git branch查看当前所在分支</span><br></pre></td></tr></table></figure></p>
+<p>这下可以看到输出的是<code>*hexo</code>,这就表示处于当前分支了</p>
+<h2 id="2-上传本地文件到分支中"><a href="#2-上传本地文件到分支中" class="headerlink" title="2. 上传本地文件到分支中"></a>2. <strong>上传本地文件到分支中</strong></h2><p>在这之前最好先自行备份一份或多份，用来尝试😀<br>在文件夹中，<code>.deploy_git</code>是执行<code>hexo d</code>后生成的动态文件，而我们需要上传到分支中的是除了这个文件夹以外的其他文件，在上传前可以先将不需要的删除，如<code>.deploy_git、node_modules、public</code>这几个文件夹都是可以删了的<br>再上传之前，确保当前处于新建的分支下，不确定的可以重复之前的查看步骤，下面开始关键时刻💨<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;更新说明&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upstream origin hexo(分支名)</span><br></pre></td></tr></table></figure>
+<p><strong>说明</strong> <code>git commit</code>操作必须要在<code>git add</code>步骤之后，<code>git push --set-upstream origin</code>是为了将文件推送到自己的GitHub上并做关联。完成这一步之后就能再GitHub上看到新建分支中多了上传的文件</p>
+<h2 id="3-拉取和修改"><a href="#3-拉取和修改" class="headerlink" title="3. 拉取和修改"></a>3. <strong>拉取和修改</strong></h2><p>有人会想，就这么简单的事你也能花这么长时间都没弄好(自带黑人问号)–别急，且听我慢慢道来<br>当文件上传好之后，就代表着我们可以在别的电脑上也能愉快的写blog啦，具体的操作步骤如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b hexo https://github.com/XXX/XXX.github.io.git</span><br></pre></td></tr></table></figure>
+<p>可以看到这和平常的从GitHub上clone项目不同，多了一个<code>-b和hexo</code>,这是用来clone分支的操作，<code>-b</code>后面跟的是分支的名字，拷贝完后，在文件夹可以看到一些文件，这是要在终端执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install 添加依赖</span><br><span class="line"></span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></p>
+<p>添加完依赖之后就简单了，执行hexo部署三大件<code>hexo clean 、hexo g 、hexo d</code>,第一次执行<code>hexo clean</code>的时候会报错，因为这下还没有生成缓存文件，执行<code>hexo g</code>后就会生成了，<code>hexo d</code>部署之后，下面来享受成果吧，打来博客看一看更新的内容<br><img src="http://image-up-lee.test.upcdn.net/wx1.jpg" alt=""><br>一秒。。。<br>两秒。。。<br>三秒。。。<br>是不是发现页面一片空白，连之前的东西都没看到了😥当我查了一下hexo的缓存文件后整个人都懵了，我发现之前上传有些文件并没有上传成功，<code>public</code>里面的缓存文件和我备份的文件比起来可以说是缺胳膊少腿了，这到底是怎么回事？当我在GitHub上的分支里查看的时候，我发现了一个地方文件夹是空的，在我的主题文件夹<code>themes</code>里面，我下载了好几个主题，然而在分支中只上传成功了2个文件夹，其余的都是空的，于是我从备份的文件里将哪个主题文件夹里的所有东西全复制到clone下来的文件里，再通过<code>git add  、 git commit  、git push</code>更新分支中的文件，果然事情没那么容易，再我更新后再去查看的时候那个文件夹里还是空的，鸟都不鸟我。<br>经过我多方面无死角的大搜查之后，终于让我发现了解决的办法，<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm -rf --cached themes/</span><br><span class="line">git add themes/</span><br></pre></td></tr></table></figure></p>
+<p>是不是觉得很莫名奇妙？没错，我现在的感觉也是莫名奇妙的，但通过这个方法确实能够将文件更新上去了，之后再重新拉取一次项目，添加一篇文章，执行<a href="#拉取和修改">拉取和修改</a>这里的步骤，这次终于将文章更新上去了，可是还有些问题没有弄明白，之后再更新咯</p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>因为上面说的思路不清晰，这里来整理一下当hexo配置到GitHub之后再新电脑上怎么拉取下来然后再操作</p>
+<ul>
+<li>在本地拉取项目<br><code>git clone -b hexo https://github.com/XXX/XXX.github.io.git</code></li>
+<li><code>添加依赖npm install</code> </li>
+<li><code>npm install hexo-deployer-git</code></li>
+<li>如果本地没有配置hexo，还要<code>npm install -g hexo-cli</code></li>
+<li>配置GitHub邮箱<code>git config --global user.email &quot;email&quot;</code></li>
+<li>配置GitHub用户名 <code>git config --global user.name &quot;username&quot;</code><br>当完成以上几步之后就可以添加文章或者直接修改项目文件夹下<code>source</code>里的文章了，修改完成之后先在本地更新hexo博客<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>部署了之后就可以上传到GitHub仓库了，执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br><span class="line">git commit -m &quot;更新说明&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>这样文章就更新上去了，同时在远程仓库中也是最新的，下次在原有项目的电脑上如果要上传的话，首先要<br><code>git pull</code><br>这一点很重要，是为了保持文件始终是最新的，到这里差不多流程就结束了</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/16/测试/" rel="next" title="说明">
+                <i class="fa fa-chevron-left"></i> 说明
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/19/判断进入页面是否微信端/" rel="prev" title="进入页面时判断是否为微信端">
+                进入页面时判断是否为微信端 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatarme.png"
+                alt="Lee" />
+            
+              <p class="site-author-name" itemprop="name">Lee</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ItemLxL" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:785732938@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/161832146/" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-首先要新建一个GitHub分支"><span class="nav-number">1.</span> <span class="nav-text">1. 首先要新建一个GitHub分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-上传本地文件到分支中"><span class="nav-number">2.</span> <span class="nav-text">2. 上传本地文件到分支中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-拉取和修改"><span class="nav-number">3.</span> <span class="nav-text">3. 拉取和修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">4.</span> <span class="nav-text">补充</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lee</span>
+
+  
+</div>
+
+<div class="powered-by1">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+</div>
+
+
+  <div class="powered-by"> --</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">黑胡子怪象 </div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
