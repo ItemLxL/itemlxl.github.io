@@ -71,23 +71,24 @@ git add themes/
 
 ## 补充
 因为上面说的思路不清晰，这里来整理一下当hexo配置到GitHub之后再新电脑上怎么拉取下来然后再操作
-* 在本地拉取项目`git clone -b hexo https://github.com/XXX/XXX.github.io.git`
+* 在本地拉取项目
+`git clone -b hexo https://github.com/XXX/XXX.github.io.git`
 * `添加依赖npm install` 
 * `npm install hexo-deployer-git`
 * 如果本地没有配置hexo，还要`npm install -g hexo-cli`
 * 配置GitHub邮箱`git config --global user.email "email"`
 * 配置GitHub用户名 `git config --global user.name "username"`
-当完成以上几步之后就可以添加文章或者直接修改项目文件夹下`source`里的文章了，修改完成之后先要上传
-```
-	git add --all
-	git commit -m "更新说明"
-	git push
-```
-上传了之后就可以在本地更新hexo博客了，执行
+当完成以上几步之后就可以添加文章或者直接修改项目文件夹下`source`里的文章了，修改完成之后先在本地更新hexo博客
 ```
 	hexo clean
 	hexo g
 	hexo d
+```
+部署了之后就可以上传到GitHub仓库了，执行
+```
+	git add --all
+	git commit -m "更新说明"
+	git push
 ```
 这样文章就更新上去了，同时在远程仓库中也是最新的，下次在原有项目的电脑上如果要上传的话，首先要
 `git pull`

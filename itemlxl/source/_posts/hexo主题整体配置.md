@@ -16,7 +16,7 @@ tags: hexo
 <!-- more -->
 
 将主题clone到我们自己的hexo站点目录下，然后打开`_config.yml`，在里面找到
-![1](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/1.png?Expires=1525180858&OSSAccessKeyId=TMP.AQEqo8LqwdgeU_v0yD4I98rFiLZHZbGT6eMD-9IDWaFo_DImRVBfgFexnoj-ADAtAhRnQO_qCe_6006lt8VwEsK3mGdFJwIVANifJzO4OeCmj16w2tstRPaczdaX&Signature=sdb7nD48NTL1cJuK5qbRXgk3r0I%3D)
+![1](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/1.png)
 把theme后面对应的主题名字换成你下载的那个主题的名字。
 
 ## 配置
