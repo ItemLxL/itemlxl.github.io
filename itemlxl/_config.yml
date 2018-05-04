@@ -81,3 +81,6 @@ deploy:
   type: git
   repo: https://github.com/ItemLxL/itemlxl.github.io.git
   branch: master
+
+#更新时间
+display_updated: true
