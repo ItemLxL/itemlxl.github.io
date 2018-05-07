@@ -239,6 +239,144 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/使用HBuilder开发混合APP应用（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatarme.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黑胡子怪象">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/07/使用HBuilder开发混合APP应用（一）/" itemprop="url">使用HBuilder开发混合APP应用（一）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-07T00:00:00+08:00">
+                2018-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; 更新于
+              <time itemprop="dateUpdated" datetime="2018-05-07T17:08:22+08:00" content="2018-05-07">
+                2018-05-07
+              </time>
+            </span>
+          
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>最近需要做一个混合app，是基于HBuilder打包的，使用h5+plus来操作手机原生功能。</p>
+</blockquote>
+<h1 id="一、创建项目"><a href="#一、创建项目" class="headerlink" title="一、创建项目"></a>一、创建项目</h1><p>打开HBuilder，右键&gt;新建&gt;移动APP，<img src="https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/HBuilder_app/h_1.png?x-oss-process=style/imgs" alt="1"><br>可以看到这里有很多个可以创建的模板，如果不熟悉的话可以先创建一个<code>Hello H5+</code>的模板，里面怎么使用h5+plus来调用各种底层能力的操作，这里我就拿空模板来说了。</p>
+<h1 id="二、目录结构"><a href="#二、目录结构" class="headerlink" title="二、目录结构"></a>二、目录结构</h1><p>当创建空模板之后，可以看到目录中有好几个文件和文件夹，分别是<code>css</code>,<code>img</code>,<code>js</code>,<code>unpackage</code>,<code>index.html</code>,<code>manifest.json</code>。<br>前三个文件夹不用说大家都知道，是用来存放样式、图片和js代码的地方；<code>unpackage</code>是可以存放不需要打包的文件，这个在打包的时候会有选项的，直接添加到unpackage清单就行了；<code>index.html</code>是入口文件,可以自己来定义的，可以要可以不要；<code>manifest.json</code>是是项目的配置文件，也是整个项目核心的一个文件。</p>
+<h1 id="打包成app"><a href="#打包成app" class="headerlink" title="打包成app"></a>打包成app</h1><p>右键项目，选择发行 &gt; 打包成原生app，然后弹出配置窗口，在弹出的配置窗口可以选择是打包成ios还是Android，选择一个，然后将需要的信息填写完整（注：在测试的时候可以不用填写完整的信息，直接打包即可），打包。等待打包完毕之后右键项目，选择发行 &gt; 云打包-打开App下载目录，当打包完成后会在这个文件夹下生成安装文件，这时打包就完成了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/30/hexo主题整体配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1104,7 +1242,7 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1117,7 +1255,7 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
