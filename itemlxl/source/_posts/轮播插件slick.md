@@ -8,8 +8,6 @@ tags: JavaScript
 
 ![11](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/11.png)
 
-<!-- more -->
-
 以上几个文件，这里需要注意的是slick.js必须要在jquery.js的下面。
 将文件导入后就可以开工了，照着文档的代码来就是
 

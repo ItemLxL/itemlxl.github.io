@@ -13,7 +13,6 @@ tags: hexo
  
     $ cd your-hexo-site  
     $ git clone https://github.com/iissnan/hexo-theme-next themes/next
-<!-- more -->
 
 先将主题clone到我们自己的hexo站点目录下，然后打开`_config.yml`，在里面找到
 ![1](https://li-7857.oss-cn-beijing.aliyuncs.com/imgs/1.png)

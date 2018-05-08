@@ -13,7 +13,6 @@ tags: hexo
 ```
 git branch
 ```
-<!-- more -->
 
 正常搭建完环境之后会输出`*master`这一默认分支，然后
 ```
